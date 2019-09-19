@@ -173,8 +173,8 @@ public class JobService {
         };
         childrenCache.getListenable().addListener(childrenCacheListener);
         try {
+            // https://blog.csdn.net/u010402202/article/details/79581575
             childrenCache.start(PathChildrenCache.StartMode.BUILD_INITIAL_CACHE);
-//				childrenCache.start(PathChildrenCache.StartMode.POST_INITIALIZED_EVENT);
         } catch (Exception e) {
             e.printStackTrace();
         }
